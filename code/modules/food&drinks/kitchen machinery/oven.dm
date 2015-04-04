@@ -72,10 +72,10 @@ var/global/list/still_choices = typesof(/obj/item/weapon/reagent_containers/food
 	foodtype.loc = get_turf(src)
 	if(colorpick)
 		F.filling_color = colorpick
-	// foodtype.attackby(F,user) //why
-	// user << "[colorpick] color"
-	playsound(loc, 'sound/machines/ding.ogg', 50, 1)
-	// return
+		foodtype.attackby(F,user) 
+		//user << "[colorpick] color"
+		playsound(loc, 'sound/machines/ding.ogg', 50, 1)
+	return
 
 /obj/machinery/cooking/proc/updatefood()
 	return
